@@ -1,12 +1,21 @@
 const axios = require("axios");
 const express = require("express");
 const app = express();
+const cors = require("cors");
 const PORT = 5000;
 const usersEndpoint = "https://jsonplaceholder.typicode.com/users";
 
 app.get("/api/hello", (req, res) => {
   res.send("Hello, World!");
 });
+
+const corsOptions = {
+  origin: "http://localhost:3000",
+  credentials: true,
+  optionSuccessStatus: 200,
+};
+
+app.use(cors(corsOptions));
 
 app.get("/api/users", async (req, res) => {
   try {

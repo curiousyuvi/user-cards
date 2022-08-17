@@ -5,13 +5,21 @@ import { Link } from "react-router-dom";
 import ColorModeToggleButton from "./ColorModeToggleButton";
 
 const Header = () => {
-  const bgColor = useColorModeValue("bg-white/50", "bg-gray-400/10");
+  const bgColor = useColorModeValue("bg-gray-100", "bg-gray-800");
+  const fromBgColor = useColorModeValue("from-gray-100", "from-gray-800");
+  const viaBgColor = useColorModeValue("via-gray-100/90", "via-gray-800/90");
+
+  const dropShadow = useColorModeValue(
+    "drop-shadow-neum-light",
+    "drop-shadow-neum-dark"
+  );
+
   return (
     <header
-      className={`w-full p-10 flex justify-center items-center fixed top-0`}
+      className={`w-full p-10 flex justify-center items-center fixed top-0 z-10 bg-gradient-to-b ${fromBgColor} ${viaBgColor} to-transparent`}
     >
       <div
-        className={`w-full p-4 flex justify-between items-center rounded-2xl ${bgColor} backdrop-blur drop-shadow-neum`}
+        className={`w-full p-4 flex justify-between items-center rounded-2xl ${bgColor} backdrop-blur ${dropShadow}`}
       >
         <HomeLinkLogo />
         <ColorModeToggleButton />

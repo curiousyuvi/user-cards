@@ -3,9 +3,13 @@ module.exports = {
   theme: {
     extend: {
       dropShadow: {
-        neum: [
-          "10px 10px 20px rgba(0, 0, 0, 0.1)",
-          "-10px -10px 20px rgba(255, 255, 255, 0.5)",
+        "neum-light": [
+          "30px 30px 20px rgba(0, 0, 0, 0.06)",
+          "-15px -15px 20px rgba(255, 255, 255, 1)",
+        ],
+        "neum-dark": [
+          "-15px -15px 15px rgba(129, 140, 248, 0.04)",
+          "30px 30px 20px rgba(0, 0, 0, 0.1)",
         ],
       },
     },

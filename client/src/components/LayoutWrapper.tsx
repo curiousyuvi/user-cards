@@ -5,7 +5,7 @@ import Footer from "./Footer";
 import Header from "./Header";
 
 const LayoutWrapper = () => {
-  const bgColor = useColorModeValue("bg-gray-200", "");
+  const bgColor = useColorModeValue("bg-gray-100", "bg-gray-800");
   return (
     <div
       className={`w-full h-full flex flex-col items-center justify-start ${bgColor}`}
