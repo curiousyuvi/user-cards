@@ -30,15 +30,24 @@ app.get("/api/users", async (req, res) => {
   }
 });
 
+//-----------------DEPLOYMENT------------------------------------------------
+
+const __dirname1 = path.resolve();
+
 if (process.env.NODE_ENV === "production") {
-  app.use(express.static(path.join(__dirname, "./client/build")));
+  app.use(express.static(path.join(__dirname1, "client/build")));
 
   app.get("*", (_, res) => {
-    res.sendFile(path.join(__dirname, "./client/build/index.html"), (err) => {
-      if (err) res.status(500).send(err);
-    });
+    res.sendFile(
+      path.join(__dirname1, "client", "build", "index.html"),
+      (err) => {
+        if (err) res.status(500).send(err);
+      }
+    );
   });
 }
+
+//-----------------DEPLOYMENT------------------------------------------------
 
 app.listen(PORT, () => {
   console.log(`Server listening on port: ${PORT}...`);
