@@ -1,7 +1,7 @@
-import { CircularProgress } from "@chakra-ui/react";
 import UserCardsList from "../components/UserCardsList";
 import useUser from "../hooks/useUser";
 import UserModal from "../components/UserModal";
+import UsersLoadingSkeleton from "../components/UsersLoadingSkeleton";
 
 const Home = () => {
   const { loading } = useUser();
@@ -9,7 +9,7 @@ const Home = () => {
   return (
     <div className="p-8 pt-60 flex flex-col justify-start items-center">
       {loading ? (
-        <CircularProgress />
+        <UsersLoadingSkeleton />
       ) : (
         <>
           <UserCardsList />
