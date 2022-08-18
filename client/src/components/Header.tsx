@@ -1,6 +1,6 @@
 import { Text, useColorModeValue } from "@chakra-ui/react";
 import React from "react";
-import { AiFillIdcard } from "react-icons/ai";
+import { FaIdCardAlt } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import ColorModeToggleButton from "./ColorModeToggleButton";
 
@@ -44,7 +44,7 @@ const Logo = () => {
 
   return (
     <div className={`p-3 ${bgColor} rounded-xl`}>
-      <AiFillIdcard className="text-2xl text-white" />
+      <FaIdCardAlt className="text-2xl text-white" />
     </div>
   );
 };
