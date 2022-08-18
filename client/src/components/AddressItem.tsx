@@ -14,12 +14,12 @@ const AddressItem = ({ address }: { address: Address }) => {
       className="flex items-start w-60 hover:scale-105 duration-300"
       onClick={handleClick}
     >
-      <span className="p-2 bg-indigo-500/20 text-sm rounded-lg text-indigo-500">
+      <span className="p-2 bg-indigo-500/20 text-xs sm:text-sm rounded-lg text-indigo-500">
         <IoLocationSharp />
       </span>
       <span className="mx-1" />
       <Text
-        className="opacity-70 text-sm"
+        className="opacity-70 text-xs sm:text-sm"
         noOfLines={2}
         textAlign="start"
       >{`${address.street}, ${address.suite}, ${address.city}, ${address.zipcode}`}</Text>

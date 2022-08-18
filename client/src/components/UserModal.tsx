@@ -26,26 +26,30 @@ const UserModal = () => {
       <ModalOverlay className="backdrop-blur" />
       <ModalContent
         bgColor={modalBgColor}
-        className="p-0 relative"
+        className="p-0 m-8 relative"
         borderRadius="3xl"
       >
         <img src="/cardTop.svg" alt="" className="translate-y-[-3px]" />
-        <div className="bg-[#7761ff] h-64 top-14 w-full absolute rounded-b-full" />
+        <div className="bg-[#7761ff] h-52 sm:h-64 top-10 sm:top-14 w-full absolute rounded-b-full z-[-1]" />
         <div
           className={`w-full h-full flex flex-col justify-start items-center rounded-2xl rounded-t-none p-8`}
         >
-          <div className={`rounded-full w-52 h-52 drop-shadow-xl`}>
+          <div
+            className={`rounded-full w-40 h-40 sm:w-52 sm:h-52 drop-shadow-xl`}
+          >
             <Avatar
               size="full"
               src={`https://avatars.dicebear.com/api/miniavs/${user.name}.svg?b=%23a8beff`}
             />
           </div>
-          <span className="my-2" />
-          <Text className="text-2xl" fontWeight="bold" noOfLines={1}>
+          <span className="my-4 sm:my-8" />
+          <Text className="text-xl sm:text-2xl" fontWeight="bold" noOfLines={1}>
             {user.name}
           </Text>
-          <span className="my-1" />
-          <Text className="text-lg opacity-70">@{user.username}</Text>
+          <span className="mb-1 sm:my-1" />
+          <Text className="text-md sm:text-lg opacity-70">
+            @{user.username}
+          </Text>
           <span className="my-4" />
           <div className="flex flex-col items-start">
             <ContactItem icon={<AiFillPhone />} value={user.phone} />
