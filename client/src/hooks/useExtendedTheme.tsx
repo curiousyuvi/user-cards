@@ -18,7 +18,7 @@ const Heading: ComponentStyleConfig = {
 
 const extendedThemeConfig: ThemeConfig = {
   useSystemColorMode: true,
-  initialColorMode: "dark",
+  initialColorMode: "light",
 };
 
 const fonts = {
