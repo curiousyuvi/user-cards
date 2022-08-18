@@ -16,7 +16,7 @@ export type Address = {
     zipcode: string;
     geo: {
         lat: string;
-        lnt: string;
+        lng: string;
     }
 }
 

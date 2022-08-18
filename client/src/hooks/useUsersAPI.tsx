@@ -1,7 +1,8 @@
 import axios from "axios";
 import { User } from "../interfaces/User";
 
-const usersApiEndpoint = "http://localhost:5000/api";
+const usersApiEndpoint =
+  process.env.NODE_ENV === "production" ? "/api" : "http://localhost:5000/api";
 const userApiAxiosInstance = axios.create({ baseURL: usersApiEndpoint });
 
 const getUsers: () => Promise<User[]> = async () => {
