@@ -4,9 +4,8 @@ import { Address } from "../interfaces/User";
 
 const AddressItem = ({ address }: { address: Address }) => {
   const handleClick = () => {
-    console.log(address.geo.lat, address.geo.lnt);
     window.open(
-      `https://maps.google.com/?q=${address.geo.lat},${address.geo.lnt}`,
+      `https://maps.google.com/?q=${address.geo.lat},${address.geo.lng}`,
       "_blank"
     );
   };

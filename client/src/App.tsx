@@ -13,7 +13,7 @@ function App() {
   return (
     <ChakraProvider theme={extendedTheme}>
       <UsersProvider>
-        <Router>
+        <Router basename="/">
           <Routes>
             <Route element={<LayoutWrapper />}>
               <Route path="/" element={<Home />} />
