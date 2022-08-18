@@ -31,11 +31,11 @@ const ContactItem = ({
       className="flex items-center mb-2 hover:scale-105 duration-300"
       onClick={handleClick}
     >
-      <span className="p-2 bg-indigo-500/20 text-sm rounded-lg text-indigo-500">
+      <span className="p-2 bg-indigo-500/20 text-xs sm:text-sm rounded-lg text-indigo-500">
         {icon}
       </span>
       <span className="mx-1" />
-      <Text className="opacity-70">{value}</Text>
+      <Text className="opacity-70 text-sm sm:text-base">{value}</Text>
     </button>
   );
 };
