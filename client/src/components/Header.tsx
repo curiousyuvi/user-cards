@@ -1,25 +1,20 @@
 import { Text, useColorModeValue } from "@chakra-ui/react";
 import React from "react";
-import { AiFillIdcard } from "react-icons/ai";
+import { FaIdCardAlt } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import ColorModeToggleButton from "./ColorModeToggleButton";
 
 const Header = () => {
-  const bgColor = useColorModeValue("bg-gray-100", "bg-gray-800");
+  const bgColor = useColorModeValue("bg-gray-200/50", "bg-gray-700/50");
   const fromBgColor = useColorModeValue("from-gray-100", "from-gray-800");
-  const viaBgColor = useColorModeValue("via-gray-100/90", "via-gray-800/90");
-
-  const dropShadow = useColorModeValue(
-    "drop-shadow-neum-light",
-    "drop-shadow-neum-dark"
-  );
+  const viaBgColor = useColorModeValue("via-gray-100/80", "via-gray-800/80");
 
   return (
     <header
-      className={`w-full p-10 flex justify-center items-center fixed top-0 z-10 bg-gradient-to-b ${fromBgColor} ${viaBgColor} to-transparent`}
+      className={`w-full p-6 flex justify-center items-center fixed top-0 z-10 bg-gradient-to-b ${fromBgColor} ${viaBgColor} to-transparent`}
     >
       <div
-        className={`w-full p-4 flex justify-between items-center rounded-2xl ${bgColor} backdrop-blur ${dropShadow}`}
+        className={`w-full p-4 flex justify-between items-center rounded-2xl ${bgColor} backdrop-blur border`}
       >
         <HomeLinkLogo />
         <ColorModeToggleButton />
@@ -49,7 +44,7 @@ const Logo = () => {
 
   return (
     <div className={`p-3 ${bgColor} rounded-xl`}>
-      <AiFillIdcard className="text-2xl text-white" />
+      <FaIdCardAlt className="text-2xl text-white" />
     </div>
   );
 };

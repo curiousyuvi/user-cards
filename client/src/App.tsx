@@ -6,18 +6,21 @@ import useExtendedTheme from "./hooks/useExtendedTheme";
 import Home from "./pages/Home";
 import "@fontsource/poppins";
 import "@fontsource/oswald";
+import UsersProvider from "./providers/UsersProvider";
 
 function App() {
   const extendedTheme = useExtendedTheme();
   return (
     <ChakraProvider theme={extendedTheme}>
-      <Router>
-        <Routes>
-          <Route element={<LayoutWrapper />}>
-            <Route path="/" element={<Home />} />
-          </Route>
-        </Routes>
-      </Router>
+      <UsersProvider>
+        <Router>
+          <Routes>
+            <Route element={<LayoutWrapper />}>
+              <Route path="/" element={<Home />} />
+            </Route>
+          </Routes>
+        </Router>
+      </UsersProvider>
     </ChakraProvider>
   );
 }
